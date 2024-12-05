@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeScript</title>
+    <link rel="stylesheet" href="typeScript.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="d-flex j-center p20">
+
+<div class="gameStartContainer d-flex direction-col text-center">
+    <h3>Choose Your Tamagotchi</h3>
+    <div class="d-flex gap20 wrap">
+        <div class="animal">🐨</div>
+        <div class="animal">🐼</div>
+        <div class="animal">🐙</div>
+        <div class="animal">🦦</div>
+        <div class="animal">🐡</div>
+        <div class="animal">🦁</div>
+        <div class="animal">🐈</div>
+        <div class="animal">🦝</div>
+    </div>
+</div>
+
+<div class="gameContainer d-flex">
+    <div class="chosenTamagochi"></div>
+    <div class="grow1 d-flex direction-col a-center">
+
+        <div class="progress">
+            <div class="progressItem">
+                <label>FUN</label>
+                <div class="progressBar">
+                    <div class="FUN"></div>
+                </div>
+            </div>
+            <div class="progressItem">
+                <label>FOOD</label>
+                <div class="progressBar">
+                    <div class="FOOD"></div>
+                </div>
+            </div>
+            <div class="progressItem">
+                <label>SLEEP</label>
+                <div class="progressBar">
+                    <div class="SLEEP"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="takeCare d-flex gap20 mt3">
+            <div class="action feed">🍳</div>
+            <div class="action play">🛼</div>
+            <div class="action goSleep">🛏</div>
+            <div class="action clean">🛁</div>
+        </div>
+    </div>
+</div>
+
+<div class="gameOver d-flex direction-col">
+    <h1>GAME OVER!</h1>
+    <button class="gameOverBtn">Play Again</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+body {
+    font-family: "Yuji Mai", serif;
+    background: linear-gradient(to bottom, #a8e0ff, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    margin: 0;
+}
+.yuji-mai-regular {
+    font-family: "Yuji Mai", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.direction-col {
+    flex-direction: column;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gameContainer {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-image: url("tamagotchi .jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.progressItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    gap: 5px;
+}
+
+.progressItem label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.progressBar {
+    width: 100%;
+    height: 25px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.progressBar div {
+    height: 100%;
+    width: 100%;
+    background-color: #ac65d0;
+    transition: width 0.5s ease;
+}
+
+
+.takeCare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 80px;
+    top: 120px;
+}
+
+.takeCare .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.takeCare .action:hover {
+    transform: scale(1.1);
+    background-color: #ffeb3b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.chosenTamagochi {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+}
+
+@keyframes moveAnimal {
+    0% {
+        left: 10%;
+    }
+    50% {
+        top: 20%;
+        left: 50%;
+    }
+    100% {
+        bottom: 20%;
+        left: 10%;
+    }
+}
+
+.chosenTamagochi.animateAnimal {
+    animation: moveAnimal 5s ease-in-out infinite;
+}
+
+
+.gameStartContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a8e0ff, #ffffff);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+.animal {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.animal:hover {
+    transform: scale(1.1);
+    background-color: #e0f7fa;
+}
+
+.gameOver {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a8e0ff, #ffffff);
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.gameOver h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.gameOverBtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #8e24aa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gameOverBtn:hover {
+    background-color: #6a1b9a;
+}
+
+.wasteContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.waste {
+    position: absolute;
+    font-size: 48px;
+    pointer-events: auto;
+    animation: fadeIn 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.progressItem label {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Yuji Mai", serif;
+    color: #6a1b9a;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
